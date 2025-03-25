@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Vida CV - Luis Omar Alpala</title>
+    <title>Hoja de Vida CV - Romo Kevin </title>
 </head>
 <style>
 * {
@@ -336,85 +336,105 @@ body {
                 </ul>
             </div>
 
-            <div class="portfolio">
-                <h2>Portafolio de Proyectos</h2>
-                <div class="tabs">
-                    <div class="tab-btn" onclick="showTab('consultoria', this)">Proyectos Consultoría</div>
-                    <div class="tab-btn" onclick="showTab('investigacion', this)">Proyectos Investigación</div>
-                    <div class="tab-btn" onclick="showTab('cursos', this)">Cursos</div>
-                    <div class="tab-btn" onclick="showTab('colaboraciones', this)">Colaboraciones</div>
-                </div>
-        <!-- Poryectos consultoria -->
-                <div id="consultoria" class="tab-content active">                              
-                    <div class="year" onclick="toggleYear('pc2023')">2023</div>
-                    <div id="pc2023" class="year-content">
+    style>
+    .tab-content { display: none; background-color: #D3D3D3; padding: 15px; border-radius: 5px; }
+    .tab-content.active { display: block; }
+    .year { cursor: pointer; font-weight: bold; margin-top: 10px; }
+    .year-content { display: none; padding-left: 20px; }
+    .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+    .tab-btn { cursor: pointer; padding: 10px; background: #D3D3D3; color: black; border-radius: 5px; }
+</style>
+
+<script>
+    function toggleYear(yearId) {
+        var content = document.getElementById(yearId);
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+    
+    function showTab(tabId, element) {
+        var tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        
+        var buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.style.background = '#007BFF');
+        element.style.background = '#0056b3';
+    }
+</script>
+
+<div class="portfolio">
+    <h2>Portafolio de Proyectos</h2>
+    <div class="tabs">
+        <div class="tab-btn" onclick="showTab('consultoria', this)">Proyectos Consultoría</div>
+        <div class="tab-btn" onclick="showTab('investigacion', this)">Proyectos Investigación</div>
+        <div class="tab-btn" onclick="showTab('cursos', this)">Cursos</div>
+        <div class="tab-btn" onclick="showTab('colaboraciones', this)">Colaboraciones</div>
+    </div>
+
+    <div id="consultoria" class="tab-content active">
+        <div class="year" onclick="toggleYear('pc2025')">2025</div>
+        <div id="pc2025" class="year-content">
+            <ul>
+                <li>Título del proyecto: Modelo de Evaluación de gestión Logística . Rol: Desarrollador.  Duración: 4 meses. Cliente o empresa: florícola León Roses. <a href="https://upecedu-my.sharepoint.com/:b:/g/personal/lisbeth_enriquez_upec_edu_ec/Eam102dMy_dBu3uqX65uMW8BzWjdjhYCEHWXnjIJxGj-eA?e=oatASQ">Link proyecto</a></li>
+            </ul>
+        </div>
+      
+    </div>
+    
+                <div id="investigacion" class="tab-content">
+                    <div class="year" onclick="toggleYear('pi2025')">2025</div>
+                    <div id="pi2025" class="year-content">
                         <ul>
-                            <li>Gestion Logística y proceso de despacho de mercancías en la zona Primaria de Exportaciones de la Asociación de transporte Pesado del Carchi
-                                Duración: 80 horas, Colaborador en la creación del prototipo del aforo en 2023 </li>
+                            <li> Título del proyecto: La demanda del servicio de almacenamiento de carga y la infraestructura nodal requerida en el Distrito de Aduanas - Tulcán. Tesis de grado. Universidad Politénica Estatal del Carchi ”UPEC” Link:	.2025</ul>
+                    </div>
+                    <div class="year" onclick="toggleYear('pi2024')">2024</div>
+                    <div id="pi2024" class="year-content">4
+                        <ul>
+                            <li>Título del proyecto: Diseño de rutas para el mejoramiento del servicio de transporte comercial, modalidad escolar e institucional, con las operadoras domiciliadas en la ciudad de Tulcán. Duración: 114 horas. Proyecto de vinculación con la sociedad.</li>
+                           
                         </ul>
                     </div>
                 </div>
-                
- <!-- Poryectos Investigación -->
-    <div id="investigacion" class="tab-content">
-        <div class="year" onclick="toggleYear('pi2025')">2025</div>
-        <div id="pi2025" class="year-content">
-            <ul>
-                <li>Título del proyecto: La demanda del servicio de almacenamiento de carga y la infraestructura nodal requerida en el Distrito de Aduanas - Tulcán. Tesis de grado. Universidad Politénica Estatal del Carchi ”UPEC” Link:	.2025 </li>
-            </ul>
-        </div>
-
-        <div class="year" onclick="toggleYear('pi2024')">2024</div>
-        <div id="pi2024" class="year-content">
-            <ul>
-                <li>Título del proyecto: Diseño de Rutas para el mejoramiento del transporte escolar. Proyecto de Vinculación. Universidad Politécnica Estatal del Carchi” UPEC” 2024 </li>
-            </ul>
-        </div>
-
-    </div>
-              
- <!-- Cursos-->
-    <div id="cursos" class="tab-content">
-        <div class="year" onclick="toggleYear('c20251')">2025</div>
-        <div id="c20251" class="year-content">
-            <ul>
-                <li>Curso de Seguridad del Transporte Duración: 60 Horas. Universidad Politécnica Estatal del Carchi ”UPEC”. 2025 Febrero.</li>
-
-            </ul>
-        </div>
-
-        <div class="year" onclick="toggleYear('c2024')">2024</div>
-        <div id="c2024" class="year-content">
-            <ul>
-                <li>Curso de Declaraciones Aduaneras. Duración: 10 Horas. My Intelecto. Guayaquil, Ecuador. 2024 Noviembre.</li>
-               </ul>
-        </div>
-
-       
-    </div>
-
-
-
-<!-- Colaboraciones-->
-    <div id="colaboraciones" class="tab-content">
-        <div class="year" onclick="toggleYear('col2025')">2025</div>
-        <div id="col2025" class="year-content">
-            <ul>
-                <li>Colaborador en el desalloro de página web AMEEXISCARGO S.A.. Duración: 45 Horas. WIX. Tulcán, Ecuador. 2025 Marzo. Link: https://www.ameexiscargo.com.ec.</li>
-        
-            </ul>
-        </div>
-    <div class="year" onclick="toggleYear('col2024')">2024</div>
-        <div id="col2024" class="year-content">
-            <ul>
-                <li>Asistente del “7° CONGRESO INTERNACIONAL DE INGENIERíS:. Duració: 40 Horas. Uni- versidad Politénica Estatal del Carchi ”UPEC”. 2024 </li>
-        
-            </ul>
-        </div>
-    </div>  
+            
+                <div id="cursos" class="tab-content">
+                    <div class="year" onclick="toggleYear('c2024')">2024</div>
+                    <div id="c2024" class="year-content">
+                        <ul>
+                            <li>Práctica de llenado de declaraciones aduaneras. Duración: 10 horas. My Intelecto, Ecuador. Noviembre.</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            
+                <div id="colaboraciones" class="tab-content">
+                    <div class="year" onclick="toggleYear('col2025')">2025</div>
+                    <div id="col2025" class="year-content">
+                        <ul>
+                            <li>Colaborador en el desalloro de página web AMEEXISCARGO S.A.. Duración: 45 Horas. WIX. Tulcán, Ecuador. 2025 Marzo. Link: https://www.ameexiscargo.com.ec.</li>
+                        </ul>
+                    </div>
+                    <div class="year" onclick="toggleYear('col2024')">2024</div>
+                    <div id="col2024" class="year-content">
+                        <ul>
+                            <li>Asistente del “7° CONGRESO INTERNACIONAL DE INGENIERíS:. Duració: 40 Horas. Uni- versidad Politénica Estatal del Carchi ”UPEC”. 2024 </li>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        <!-- Archivos CSS -->
+        <link rel="stylesheet" href="../hv/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+    <!-- Scripts -->
+    <script src="../hv/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
 
         <!-- Archivos CSS -->
         <link rel="stylesheet" href="../HVconfoto/css/main.css" />
